@@ -16,4 +16,4 @@
 node_modules/
 build/
 dist/
-.cash/
+.cache/
