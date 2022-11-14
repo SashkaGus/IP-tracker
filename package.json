@@ -2,7 +2,7 @@
   "name": "proj2-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html --out-dir=build"
@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.2"
   }
 }

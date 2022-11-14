@@ -120,6 +120,9 @@
   }
   .map {
     min-height: calc(100vh - 200px);
+    /* width: 500px;
+    height: 500px;
+    background-color: #333; */
   }
   
   @media (min-width: 1024px) {
