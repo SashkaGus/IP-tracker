@@ -1,29 +1,26 @@
 import {validateIp} from './helpers'
+import L from 'leaflet'
+import 'leaflet/dist/leaflet.css';
 
-// function init() {
-//     var map = new ymaps.Map('map', {
-//         center: [59.94, 30.32],
-//         zoom: 10
-//     })
-// }
 
-// ymaps
-//   .load()
-//   .then(maps => {
-//     const map = new maps.Map('your-map-container', {
-//       center: [-8.369326, 115.166023],
-//       zoom: 7
-//     });
-//   })
-//   .catch(error => console.log('Failed to load Yandex Maps', error));
-
-// ymaps.ready(init);
+const mapArea = document.querySelector('.map')
 const ipInput = document.querySelector('.search-bar__input')
 const btn = document.querySelector('.search-bar__btn')
 const ipInfo = document.querySelector('#ip')
 const locationInfo = document.querySelector('#location')
 const timezoneInfo = document.querySelector('#timezone')
 const ispInfo = document.querySelector('#isp')
+
+
+const map = L.map(mapArea, {
+    center:[51.5, 0],
+    zoom: 10
+    
+});
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
 btn.addEventListener('click', getData)
 ipInput.addEventListener('keydown', handleKey)
